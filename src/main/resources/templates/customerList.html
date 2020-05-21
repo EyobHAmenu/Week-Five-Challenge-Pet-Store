@@ -40,7 +40,7 @@
     <div class="card bf-info">
         <div class="card-body">
             <h2 class="card-title">List Of Customers</h2>
-            <h6 class="card-subtitle mb-2 text-muted">pet</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Cat and Dog</h6>
             <p class="card-text" th:each="customer:${customerList}">
                 Customer name: [[${customer.getCustomerName()}]]<br>
                 Phone: [[${customer.getCustomerPhone()}]]<br>
@@ -73,6 +73,117 @@
                 <span th:if="${customer.getCustomerPet().getPetBreed()} == '17'">Sphinx</span><br>
             </p>
             <a href="/newCustomer" class="card-link">Add</a>
+        </div>
+    </div>
+
+    <div class="card-deck">
+        <div class="card">
+            <img src="dog-and-cat.png" alt="dog&cat">
+            <div class="card-body">
+                <h4 class="card-title">e PET STORE</h4>
+                <p class="card-text">
+                    <i class="fas fa-location-arrow">
+                        <a href="https://www.google.com/maps/place/Unleashed+by+Petco/@38.9939194,-77.0270152,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c8bbdd947281:0xe9ac07b03b21a2f5!8m2!3d38.9939194!4d-77.0270152">
+                            8412 Georgia Ave, Silver Spring, MD 20910
+                        </a>
+                    </i><br>
+                    <i class="fas fa-phone-alt">
+                        (301)-589-1235
+                    </i><br>
+                    <i class="fas fa-at"></i>
+                    email
+                    </i><br>
+                    <i class="fab fa-facebook">
+                        facebook
+                    </i><br>
+                    <i class="fab fa-instagram">
+                        Instagram
+                    </i>
+
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Services</h4>
+                <p class="card-text">
+                <table class="table">
+                    <thead class="thead-light">
+                    <tr>
+                        <th>Everyday Services</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>In-Store Events</td>
+                    </tr>
+                    <tr>
+                        <td>Grooming</td>
+                    </tr>
+                    <tr>
+                        <td>Positive Dog Training</td>
+                    </tr>
+                    <tr>
+                        <td>Veterinary Services</td>
+                    </tr>
+                    <tr>
+                        <td>Pet Sitting</td>
+                    </tr>
+                    <tr>
+                        <td>Dog Walking</td>
+                    </tr>
+                    <tr>
+                        <td>Pet Adoptions</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Store hours</h4>
+                <p class="card-text">
+                <table class="table">
+                    <thead class="thead-light">
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>10:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>10:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>10:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>10:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>10:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>8:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>8:00am - 6:00pm</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </p>
+            </div>
         </div>
     </div>
 
