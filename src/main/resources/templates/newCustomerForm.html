@@ -38,8 +38,8 @@
 
     <form action="#" th:action="@{/check}" th:object="${customer}" method="post">
 
-        Name: <input type="text" th:field="*{customerName}"/><br>
-        Phone: <input type="number" th:field="*{customerPhone}" placeholder="xxx-xxx-xxxx"/><br>
+        Name: <input type="text" th:field="*{customerName}" name="customerName"/><br>
+        Phone: <input type="number" th:field="*{customerPhone}" name="customerPhone" placeholder="xxx-xxx-xxxx"/><br>
         Pet Type: <input type="text" name="petType" placeholder="cat/dog"/>
 
         <input type="submit" value="Submit">

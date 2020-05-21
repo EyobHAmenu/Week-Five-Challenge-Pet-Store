@@ -24,7 +24,7 @@ public class Controller {
     }
 
     @PostMapping("/customerList")
-    public String displayCustomer(Customer customer, Pet pet){
+    public String displayCustomer(@ModelAttribute Customer customer, Pet pet){
         customer.setCustomerPet(pet);
         if(pet.getPetType().equalsIgnoreCase("dog")){
             dogCustomers.add(customer);
@@ -36,9 +36,12 @@ public class Controller {
     }
 
     @PostMapping("/check")
-    public String dogOrCat(@RequestParam("petType") String petType, Customer customer, Model model){
+    public String dogOrCat(@RequestParam("petType") String petType, @RequestParam("customerName") String customerName,
+                           @RequestParam("customerPhone") String customerPhone, Customer customer, Model model){
         Pet newPet = new Pet();
         newPet.setPetType(petType);
+        customer.setCustomerName(customerName);
+        customer.setCustomerPhone(customerPhone);
         if(petType.equalsIgnoreCase("dog")){
             model.addAttribute("newDog", newPet);
             return"dogForm";
@@ -49,12 +52,13 @@ public class Controller {
         }
         return "redirect:/newCustomer";
     }
-    @PostMapping("/dogList")
+
+    @GetMapping("/dogList")
     public String listOfDogs(Model model){
         model.addAttribute("dogList", dogCustomers);
         return "dogList";
     }
-    @PostMapping("/catList")
+    @GetMapping("/catList")
     public String listOfCats(Model model){
         model.addAttribute("catList", catCustomers);
         return "catList";
