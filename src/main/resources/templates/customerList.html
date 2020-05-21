@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/petStore.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <title>customer list</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#!">e PET-STORE</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/newCustomer">New Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dogList">Dog List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/catList">Cat List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">All List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Customers and pets Information List</h1>
+    <div class="card bf-info">
+        <div class="card-body">
+            <h2 class="card-title">List Of Customers</h2>
+            <h6 class="card-subtitle mb-2 text-muted">pet</h6>
+            <p class="card-text" th:each="customer:${customerList}">
+                Customer name: [[${customer.getCustomerName()}]]<br>
+                Phone: [[${customer.getCustomerPhone()}]]<br>
+                Pet Name:[[${customer.getCustomerPet().petName}]]<br>
+                Age:[[${customer.getCustomerPet().petAge}]]<br>
+
+                Gender:
+                <span th:if="${customer.getCustomerPet().petGender} == 'M'">Male</span>
+                <span th:if="${customer.getCustomerPet().petGender} == 'F'">Female</span><br>
+                Pet Type:[[${customer.getCustomerPet(). getPetType()}]]<br>
+
+                Breed Type:
+                <!--If pet type is dog-->
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '1'">Alaskan Husky</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '2'">Boxer</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '3'">Chihuahua</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '4'">Golden Retriever</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '5'">Maltese</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '6'">Poodle</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '7'">Shar-Pei</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '8'">Yorkshire Terrier</span>
+
+                <!--If pet type is dog-->
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '11'">Abyssinian</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '12'">Asian Semi-longhair</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '13'">Birman</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '14'">Bombay</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '15'">Korat</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '16'">Russian Blue</span>
+                <span th:if="${customer.getCustomerPet().getPetBreed()} == '17'">Sphinx</span><br>
+            </p>
+            <a href="/newCustomer" class="card-link">Add</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>

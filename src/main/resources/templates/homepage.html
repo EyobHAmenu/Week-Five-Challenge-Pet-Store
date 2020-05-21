@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/petStore.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3098a4e8eb.js" crossorigin="anonymous"></script>
+    <title>home</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#!">e PET-STORE</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/newCustomer">New Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dogList">Dog List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/catList">Cat List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">All List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="card-deck">
+        <div class="card">
+            <img src="dog-and-cat.png" alt="dog&cat">
+            <div class="card-body">
+                <h4 class="card-title">e PET STORE</h4>
+                <p class="card-text">
+                    <i class="fas fa-location-arrow">
+                        <a href="https://www.google.com/maps/place/Unleashed+by+Petco/@38.9939194,-77.0270152,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c8bbdd947281:0xe9ac07b03b21a2f5!8m2!3d38.9939194!4d-77.0270152">
+                            8412 Georgia Ave, Silver Spring, MD 20910
+                        </a>
+                    </i><br>
+                    <i class="fas fa-phone-alt">
+                         (301)-589-1235
+                    </i><br>
+                    <i class="fas fa-at"></i>
+                        email
+                    </i><br>
+                    <i class="fab fa-facebook">
+                        facebook
+                    </i><br>
+                    <i class="fab fa-instagram">
+                        Instagram
+                    </i>
+
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Services</h4>
+                <p class="card-text">
+                <table class="table">
+                    <thead class="thead-light">
+                    <tr>
+                        <th>Everyday Services</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>In-Store Events</td>
+                    </tr>
+                    <tr>
+                        <td>Grooming</td>
+                    </tr>
+                    <tr>
+                        <td>Positive Dog Training</td>
+                    </tr>
+                    <tr>
+                        <td>Veterinary Services</td>
+                    </tr>
+                    <tr>
+                        <td>Pet Sitting</td>
+                    </tr>
+                    <tr>
+                        <td>Dog Walking</td>
+                    </tr>
+                    <tr>
+                        <td>Pet Adoptions</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Store hours</h4>
+                <p class="card-text">
+                <table class="table">
+                    <thead class="thead-light">
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>10:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>10:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>10:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>10:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>10:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>8:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>8:00am - 6:00pm</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>

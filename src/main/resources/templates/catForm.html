@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="petStore.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <title>cat form</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#!">e PET-STORE</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/newCustomer">New Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dogList">Dog List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/catList">Cat List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">All List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Cat Information</h1>
+    <form action="#" th:action="@{/customerList}" th:object="${newCat}" method="post">
+
+        Name: <input type="text" th:field="*{petName}"/><br>
+        Age: <input type="number" th:field="*{petAge}"/><br>
+        Gender:
+        <input type="radio" id="male" th:field="*{petGender}" th:value="M">
+        <label for="male">Male</label>
+        <input type="radio" id="female" th:field="*{petGender}" th:value="F">
+        <label for="female">Female</label><br>
+        Pet Type: <input type="text" th:field="*{petType}"/><br>
+        Breed Type:
+        <input type="radio" id="one" th:field="*{petBreed}" th:value="11">
+        <label for="one">Abyssinian</label>
+        <input type="radio" id="two" th:field="*{petBreed}" th:value="12">
+        <label for="two">Asian Semi-longhair</label>
+        <input type="radio" id="three" th:field="*{petBreed}" th:value="13">
+        <label for="three">Birman</label>
+        <input type="radio" id="four" th:field="*{petBreed}" th:value="14">
+        <label for="four">Bombay</label><br>
+        <input type="radio" id="five" th:field="*{petBreed}" th:value="15">
+        <label for="five">Korat</label>
+        <input type="radio" id="six" th:field="*{petBreed}" th:value="16">
+        <label for="six">Russian Blue</label>
+        <input type="radio" id="seven" th:field="*{petBreed}" th:value="17">
+        <label for="seven">Sphinx</label><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
